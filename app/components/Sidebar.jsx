@@ -4,22 +4,22 @@ import { Twitter, Linkedin, Medium, Envelope } from "./icons/";
 
 const Sidebar = ({ data }) => {
   return (
-    <div className="bg-black flex flex-col h-auto content-between w-full sm:justify-around sm:h-screen sm:w-1/3 sm:fixed">
+    <div className="bg-black flex flex-col h-auto content-between w-full sm:justify-center sm:place-content-around sm:h-full sm:w-1/3 sm:fixed">
       <div className="text-white flex flex-col p-10 items-center ">
         <Image
           priority
-          width={300}
-          height={300}
+          width={230}
+          height={230}
           className="rounded-full h-full mb-6"
           src={"/images/farhad-ali.png"}
           alt="farhad-ali.png"
           aria-label="farhad-ali.png"
         />
         <h1 className="mb-2">{data.name}</h1>
-        <h2 className="mb-8">{data.role}</h2>
+        <h2 className="mb-6">{data.role}</h2>
         <p className="mb-2">{data.education[0]}</p>
-        <p className="mb-2">{data.education[1]}</p>
-        <div className="text-white text-center  mb-4 mt-4 sm:mt-8">
+        <p className="mb-0">{data.education[1]}</p>
+        <div className="text-white  place-content-center mb-4 mt-4 sm:mt-8">
           <h3 className="mb-2">CONTACT ME:</h3>
           <div className="flex flex-row justify-center gap-1">
             <a
